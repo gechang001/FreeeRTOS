@@ -53,6 +53,11 @@
 
 /* USER CODE BEGIN Includes */     
 #include "GPIO.h"
+#include "string.h"
+#include "dma.h"
+#include "main.h"
+#include "stm32f1xx_hal.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Variables -----------------------------------------------------------------*/
@@ -112,15 +117,37 @@ void StartInitTask(void const * argument)
 
   /* USER CODE BEGIN StartInitTask */
   /* Infinite loop */
+	HAL_UART_Receive_DMA(&huart1, UsartType1.usartDMA_rxBuf, RECEIVELEN);  						//串口1DMA开启
+	__HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE); 																			//串口1空闲中断
+	HAL_UART_Receive_DMA(&huart3, UsartType3.usartDMA_rxBuf, RECEIVELEN);  						//串口3DMA开启
+	__HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE); 	
+	
+	    xTaskCreate( vTask1,                  /*指向任务函数的指针*/
+                 "vTask1",               /*任务的文本名字,只会在调试中用到*/
+                 128,                       /*栈深度,占用内存大小等于值x4*/
+                 NULL,                      /*没有任务参数*/
+                 1,                         /*任务优先级,0最小*/
+                 NULL);        /*不会用到任务句柄*/
+	
   for(;;)
   {
 		HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
-    osDelay(100);
+		printf("GC001\r\n");
+    osDelay(1000);
   }
   /* USER CODE END StartInitTask */
 }
 
 /* USER CODE BEGIN Application */
+
+void vTask1(void *pvParameters)
+{
+	for(;;)
+	{
+		printf("GC002\r\n");
+		osDelay(2000);
+	}
+}
      
 /* USER CODE END Application */
 

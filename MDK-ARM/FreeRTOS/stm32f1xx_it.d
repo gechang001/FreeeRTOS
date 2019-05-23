@@ -45,3 +45,4 @@ freertos\stm32f1xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/time
 freertos\stm32f1xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 freertos\stm32f1xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 freertos\stm32f1xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+freertos\stm32f1xx_it.o: ../Inc/usart.h

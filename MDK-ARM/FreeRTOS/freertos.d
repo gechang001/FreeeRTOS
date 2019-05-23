@@ -45,3 +45,6 @@ freertos\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 freertos\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
 freertos\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
 freertos\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+freertos\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+freertos\freertos.o: ../Inc/dma.h
+freertos\freertos.o: ../Inc/usart.h

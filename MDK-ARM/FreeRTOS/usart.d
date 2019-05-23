@@ -31,3 +31,4 @@ freertos\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
 freertos\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
 freertos\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 freertos\usart.o: ../Inc/gpio.h
+freertos\usart.o: ../Inc/dma.h

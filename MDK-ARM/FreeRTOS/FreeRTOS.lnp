@@ -2,6 +2,7 @@
 "freertos\startup_stm32f103xb.o"
 "freertos\main.o"
 "freertos\gpio.o"
+"freertos\dma.o"
 "freertos\freertos.o"
 "freertos\usart.o"
 "freertos\usb.o"

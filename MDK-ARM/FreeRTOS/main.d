@@ -44,6 +44,7 @@ freertos\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 freertos\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 freertos\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 freertos\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+freertos\main.o: ../Inc/dma.h
 freertos\main.o: ../Inc/usart.h
 freertos\main.o: ../Inc/usb.h
 freertos\main.o: ../Inc/gpio.h

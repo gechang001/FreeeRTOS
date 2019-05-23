@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : USART.h
-  * Description        : This file provides code for the configuration
-  *                      of the USART instances.
+  * File Name          : dma.h
+  * Description        : This file contains all the function prototypes for
+  *                      the dma.c file
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -47,8 +47,9 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __usart_H
-#define __usart_H
+#ifndef __dma_H
+#define __dma_H
+
 #ifdef __cplusplus
  extern "C" {
 #endif
@@ -57,46 +58,28 @@
 #include "stm32f1xx_hal.h"
 #include "main.h"
 
+/* DMA memory to memory transfer handles -------------------------------------*/
+extern void _Error_Handler(char*, int);
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-extern UART_HandleTypeDef huart1;
-extern UART_HandleTypeDef huart3;
-
 /* USER CODE BEGIN Private defines */
-#define RECEIVELEN 256  
-#define USART_DMA_SENDING  1 //发送未完成  
-#define USART_DMA_SENDOVER 0 //发送完成  
-typedef struct  
-{  
-uint8_t receive_flag:1;//空闲接收标记    
-uint16_t rx_len;//接收长度  
-uint8_t usartDMA_rxBuf[RECEIVELEN];//DMA接收缓存  
-}USART_RECEIVETYPE;  
-   
-extern USART_RECEIVETYPE UsartType1;  
-extern USART_RECEIVETYPE UsartType3;  
 
 /* USER CODE END Private defines */
 
-extern void _Error_Handler(char *, int);
-
-void MX_USART1_UART_Init(void);
-void MX_USART3_UART_Init(void);
+void MX_DMA_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-extern void UsartReceive_IDLE(UART_HandleTypeDef *huart);
+
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
 }
 #endif
-#endif /*__ usart_H */
 
-/**
-  * @}
-  */
+#endif /* __dma_H */
 
 /**
   * @}
