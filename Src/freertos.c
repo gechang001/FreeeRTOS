@@ -51,7 +51,8 @@
 #include "task.h"
 #include "cmsis_os.h"
 
-/* USER CODE BEGIN Includes */     
+/* USER CODE BEGIN Includes */    
+#include "app.h"
 #include "GPIO.h"
 #include "string.h"
 #include "dma.h"
@@ -73,7 +74,7 @@ void StartInitTask(void const * argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* USER CODE BEGIN FunctionPrototypes */
-
+//void vTask1(void const * argument);
 /* USER CODE END FunctionPrototypes */
 
 /* Hook prototypes */
@@ -139,16 +140,7 @@ void StartInitTask(void const * argument)
 }
 
 /* USER CODE BEGIN Application */
-
-void vTask1(void *pvParameters)
-{
-	for(;;)
-	{
-		printf("GC002\r\n");
-		osDelay(2000);
-	}
-}
-     
+  
 /* USER CODE END Application */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

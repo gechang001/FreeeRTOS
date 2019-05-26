@@ -9,6 +9,7 @@
 "freertos\stm32f1xx_it.o"
 "freertos\stm32f1xx_hal_msp.o"
 "freertos\stm32f1xx_hal_timebase_tim.o"
+"freertos\app.o"
 "freertos\stm32f1xx_hal_gpio_ex.o"
 "freertos\stm32f1xx_hal_tim.o"
 "freertos\stm32f1xx_hal_tim_ex.o"

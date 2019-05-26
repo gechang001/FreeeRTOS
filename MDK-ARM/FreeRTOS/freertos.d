@@ -16,6 +16,7 @@ freertos\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 freertos\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 freertos\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 freertos\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+freertos\freertos.o: ../Inc/app.h
 freertos\freertos.o: ../Inc/GPIO.h
 freertos\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 freertos\freertos.o: ../Inc/stm32f1xx_hal_conf.h
