@@ -7,7 +7,12 @@
 /* USER CODE BEGIN Includes */
 
 
+
+
+void FirstInit(void);
+void vTaskInit(void);
 void vTask1(void *pvParameters);
+void vTask2(void *pvParameters);
 
 /* USER CODE END Includes */
 

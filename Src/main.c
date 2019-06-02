@@ -56,7 +56,7 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "app.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -113,7 +113,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
-
+	FirstInit();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

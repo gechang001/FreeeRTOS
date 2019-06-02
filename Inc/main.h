@@ -89,6 +89,30 @@
 
 /* USER CODE BEGIN Private defines */
 
+#define LED0_ON 								HAL_GPIO_WritePin(LED0_GPIO_Port,LED0_Pin,GPIO_PIN_RESET)
+#define LED0_OFF 								HAL_GPIO_WritePin(LED0_GPIO_Port,LED0_Pin,GPIO_PIN_SET)
+#define LED0_TOGGLE     				HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin)       
+
+#define LED1_ON 								HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_RESET)
+#define LED1_OFF 								HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_SET)
+#define LED1_TOGGLE     				HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin)  
+
+#define KEYA_READ 							HAL_GPIO_ReadPin(KEYA_GPIO_Port,KEYA_Pin)
+
+#define KEYB_READ 							HAL_GPIO_ReadPin(KEYB_GPIO_Port,KEYB_Pin)
+
+#define VS1838_READ 						HAL_GPIO_ReadPin(VS1838_GPIO_Port,VS1838_Pin)
+
+#define DHT11_HIGH 							HAL_GPIO_WritePin(DHT11_GPIO_Port,DHT11_Pin,GPIO_PIN_SET)
+#define DHT11_LOW 							HAL_GPIO_WritePin(DHT11_GPIO_Port,DHT11_Pin,GPIO_PIN_RESET)
+#define DHT11_TOGGLE   				 	HAL_GPIO_TogglePin(DHT11_GPIO_Port,DHT11_Pin) 
+#define DHT11_READ 							HAL_GPIO_ReadPin(DHT11_GPIO_Port,DHT11_Pin)
+
+#define ESP8266_REST_HIGH 			HAL_GPIO_WritePin(ESP8266_REST_GPIO_Port,ESP8266_REST_Pin,GPIO_PIN_SET)
+#define ESP8266_REST_LOW 				HAL_GPIO_WritePin(ESP8266_REST_GPIO_Port,ESP8266_REST_Pin,GPIO_PIN_RESET)
+#define CH_PD_HIGH 							HAL_GPIO_WritePin(CH_PD_GPIO_Port,CH_PD_Pin,GPIO_PIN_SET)
+#define CH_PD_LOW 							HAL_GPIO_WritePin(CH_PD_GPIO_Port,CH_PD_Pin,GPIO_PIN_RESET)
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

@@ -48,3 +48,4 @@ freertos\main.o: ../Inc/dma.h
 freertos\main.o: ../Inc/usart.h
 freertos\main.o: ../Inc/usb.h
 freertos\main.o: ../Inc/gpio.h
+freertos\main.o: ../Inc/app.h
