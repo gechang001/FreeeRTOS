@@ -49,3 +49,4 @@ freertos\app.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 freertos\app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 freertos\app.o: ../Inc/dma.h
 freertos\app.o: ../Inc/usart.h
+freertos\app.o: ../Inc/24cxx.h

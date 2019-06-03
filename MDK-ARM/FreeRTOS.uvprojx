@@ -472,6 +472,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\app.c</FilePath>
             </File>
+            <File>
+              <FileName>24cxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\24cxx.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

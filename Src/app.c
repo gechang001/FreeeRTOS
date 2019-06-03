@@ -13,6 +13,7 @@ extern void StartInitTask(void const * argument);
 #include "main.h"
 #include "stm32f1xx_hal.h"
 #include "usart.h"
+#include "24cxx.h"
 /* USER CODE END Includes */
 
 void FirstInit()
@@ -56,8 +57,13 @@ void vTask2(void *pvParameters)
 {
 	for(;;)
 	{
-		printf("GC002\r\n");
+		printf("≤‚ ‘24CM10\r\n");
+		AT24CM01_WRITE(10,(uint8_t*)"0123456789",10);
 		osDelay(2000);
+		uint8_t test[10]="9876543210";
+//		AT24CM01_READ(10,test,10);
+		printf("%s\r\n",test);
+		osDelay(5000);
 	}
 }   
 
